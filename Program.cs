@@ -7,7 +7,7 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            // här instansieras klassen NumberGuess så att spelet vars logik klassen själv sköter körs i main khggk
+            // här instansieras klassen NumberGuess så att spelet vars logik klassen själv sköter körs i main
             NumberGuess ng = new NumberGuess();
             ng.numberguessmetod();
           
