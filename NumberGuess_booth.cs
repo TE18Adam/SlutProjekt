@@ -1,13 +1,18 @@
 using System;
+using Newtonsoft.Json;
+using RestSharp;
 
 namespace Program
 {
-    public class NumberGuess : ArvSource
+    public class NumberGuess_booth : Booth_basklass
     {
 
-
-        public void numberguessmetod()
-        {
+        private int attempts = 3;
+        private int hisguess = 0;
+        private int secretnumber;
+        private string WnaReplay;
+    public void numberguessmetod()
+    {
            
            
         while(trues == false)
@@ -15,7 +20,7 @@ namespace Program
             try{
 
             // Random generator som slumpar det hemliga numret som spelaren ska gissa
-            int secretnumber = randomnumber.Next(10);
+            secretnumber = randomnumber.Next(10);
            
            
             // En while loop vars funktion är att kolla om spelaren vill spela om spelet eller gå vidare till nästa
@@ -46,7 +51,7 @@ namespace Program
                    // om spelaren gissar rätt visas texten inom console.Writeline
                    if(hisguess == secretnumber)
                    {
-                       Console.Write("Congrats your guess of " + attempts + " was right!");
+                       Console.Write(" Congrats your guess of " + attempts + " was right!");
                        replay = false;
                    }
    
@@ -63,13 +68,15 @@ namespace Program
                /* ett block kod som frågar spelaren om han vill spepa om spelet eller inte, om han vill det så blur replay bool sann
                igen vilket gör att spel loopen fortfarande körs. om svaret är nej avslutas loopen */
                Console.WriteLine("do you wish to replay? respond with a yes or no");
-               string WnaReplay = Console.ReadLine();
+               WnaReplay = Console.ReadLine();
 
                // om spelaren vill spela om spelet igen så startas loopen om igen och spelaren återfår alla sina 3 gissningar
                if(WnaReplay == "yes")
                {
+                   secretnumber = randomnumber.Next(10);
                    replay = true;
                    attempts = 3;
+                  
                }
 
                if(WnaReplay == "no")
@@ -77,7 +84,6 @@ namespace Program
                    replay = false;
                    Console.WriteLine(" ok now on to the next game!");
                }
-            
             }
 
             Console.ReadLine();
@@ -87,7 +93,9 @@ namespace Program
             {
                 Console.WriteLine("Write in a number not letters");
             }
+
             }
-        }
     }
+}
+
 }

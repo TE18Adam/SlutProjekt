@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LX+LxG0UC7Cp3M2yhe2DGSz8pmfIBF63HCCGgK4lf6y+qewcRRIKiq0Z9QuwD71Ubfbeh3iRSy6KU/NpqK1FhQ==",
+  "dgSpecHash": "3gQ/gq2KTcma6eGNBmc0JbHQ5KLB3qiGLadpVWrF9F2e3nEdxnbbOmywbju18kz15Q5xhXyMd+DeCsQ0rQOxIQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\adamz\\Documents\\vscode\\vscode\\Programmering Redemption Arc\\Program.cs\\Program.csproj",
+  "projectFilePath": "C:\\Users\\adamz\\Documents\\vscode\\Programmering Redemption Arc\\Program.cs\\Program.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\adamz\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\adamz\\.nuget\\packages\\restsharp\\106.11.7\\restsharp.106.11.7.nupkg.sha512"

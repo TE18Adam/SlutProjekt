@@ -1,13 +1,14 @@
 using System;
 using Newtonsoft.Json;
 using RestSharp;
+using System.Linq;
 
 namespace Program
 {
-    public class API : ArvSource
+    public class Trivia_booth : Booth_basklass
     {
-       
-        
+        private bool morefacts = true;
+        private int trivianuminput;
         public void apithing ()
         {
            
@@ -18,36 +19,39 @@ namespace Program
           while(trues == false && morefacts == true)
           {
             try {
-            
-                
-            /* konverterar vad avändaren skrev för numer till en int som sedan läggs imellan länkens 2 delar så den skapar en länk som 
-            requestar ett random fact om numret som spelaren skrev in */  
-            int trivianum2 =  Convert.ToInt32(Console.ReadLine());
-            string link = "http://numbersapi.com/" + trivianum2 + "/trivia";
-            
 
-          
+             // instansierar Game_variables så att getnumber metoden kan köras och så att inkapslingen är aktiv
+             Booth_basklass linkcreate = new Booth_basklass();           
+        
+              /* konverterar vad avändaren skrev för numer till en int som sedan läggs imellan länkens 2 delar så den skapar en länk som 
+              requestar ett random fact om numret som spelaren skrev in */  
+              trivianuminput =  Convert.ToInt32(Console.ReadLine());
+            
+              // anropar instansen linkcreate och accessar metoden getnumber inom instansen och sätter variabeln inom metoden till trivianuminput om kraven av inkapslingen är zVBNµ|
+              linkcreate.getnumber = trivianuminput;
+                        
+              string link = "http://numbersapi.com/" + getnumber + "/trivia";
+                    
+
             // Här skapar man ett pull request för data från den publika API'n visad i den första parantesen
             RestClient PullingFrom = new RestClient("http://numbersapi.com/");
             
             // här specfierar vad från API'n det är för information man vill ha 
             RestRequest TriviaRequest = new RestRequest(link);
-
-
             IRestResponse response = PullingFrom.Get(TriviaRequest);
-
-           
+          
+ 
             Console.WriteLine(response.Content);
             Console.WriteLine("Want facts about more numbers?");
             string factsagain = Console.ReadLine();
-            
-            if(factsagain == "y")
+           
+            if( yesarray.Contains(factsagain) )
             {
               morefacts = true;
               trues = false;
             }
 
-            if(factsagain == "n")
+            if( noarray.Contains(factsagain) )
             {
               morefacts = false;
               trues = true;
@@ -57,12 +61,15 @@ namespace Program
             trues = true;
  
             }
-            
             catch
             {
               Console.WriteLine( "Write in a number not text");
             }
+         
           }
+
         }
+        
+     
     }
 }

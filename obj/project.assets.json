@@ -83,11 +83,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\adamz\\Documents\\vscode\\vscode\\Programmering Redemption Arc\\Program.cs\\Program.csproj",
+      "projectUniqueName": "C:\\Users\\adamz\\Documents\\vscode\\Programmering Redemption Arc\\Program.cs\\Program.csproj",
       "projectName": "Program",
-      "projectPath": "c:\\Users\\adamz\\Documents\\vscode\\vscode\\Programmering Redemption Arc\\Program.cs\\Program.csproj",
+      "projectPath": "C:\\Users\\adamz\\Documents\\vscode\\Programmering Redemption Arc\\Program.cs\\Program.csproj",
       "packagesPath": "C:\\Users\\adamz\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\adamz\\Documents\\vscode\\vscode\\Programmering Redemption Arc\\Program.cs\\obj\\",
+      "outputPath": "C:\\Users\\adamz\\Documents\\vscode\\Programmering Redemption Arc\\Program.cs\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\adamz\\AppData\\Roaming\\NuGet\\NuGet.Config"
