@@ -4,14 +4,11 @@ using System.Linq;
 using RestSharp;
 using System;
 
-namespace Program
-
-{
-    public class luxuryjukebox : jukebox
+    public class LuxuryJukebox : Jukebox
     {
        
      
-        public void luxury()
+        public void Luxury()
         {
             var songlist = new List<string>(); 
 
@@ -56,4 +53,3 @@ namespace Program
                 Console.ReadLine();
         }
     }
-}

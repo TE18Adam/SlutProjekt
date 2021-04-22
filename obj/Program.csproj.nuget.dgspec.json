@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\adamz\\Documents\\vscode\\Programmering Redemption Arc\\Program.cs\\Program.csproj": {}
+    "C:\\Users\\adam.zbati\\Documents\\vscode\\vscode2\\vscode\\vscode\\Programmering Redemption Arc\\Program.cs\\SlutProjekt\\Program.csproj": {}
   },
   "projects": {
-    "C:\\Users\\adamz\\Documents\\vscode\\Programmering Redemption Arc\\Program.cs\\Program.csproj": {
+    "C:\\Users\\adam.zbati\\Documents\\vscode\\vscode2\\vscode\\vscode\\Programmering Redemption Arc\\Program.cs\\SlutProjekt\\Program.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\adamz\\Documents\\vscode\\Programmering Redemption Arc\\Program.cs\\Program.csproj",
+        "projectUniqueName": "C:\\Users\\adam.zbati\\Documents\\vscode\\vscode2\\vscode\\vscode\\Programmering Redemption Arc\\Program.cs\\SlutProjekt\\Program.csproj",
         "projectName": "Program",
-        "projectPath": "C:\\Users\\adamz\\Documents\\vscode\\Programmering Redemption Arc\\Program.cs\\Program.csproj",
-        "packagesPath": "C:\\Users\\adamz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\adamz\\Documents\\vscode\\Programmering Redemption Arc\\Program.cs\\obj\\",
+        "projectPath": "C:\\Users\\adam.zbati\\Documents\\vscode\\vscode2\\vscode\\vscode\\Programmering Redemption Arc\\Program.cs\\SlutProjekt\\Program.csproj",
+        "packagesPath": "C:\\Users\\adam.zbati\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\adam.zbati\\Documents\\vscode\\vscode2\\vscode\\vscode\\Programmering Redemption Arc\\Program.cs\\SlutProjekt\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\adamz\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\adam.zbati\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -62,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

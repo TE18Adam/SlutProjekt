@@ -4,9 +4,7 @@ using System;
 using Newtonsoft.Json;
 using RestSharp;
 
-namespace Program
-{
-    public class jukebox : Booth_basklass
+    public class Jukebox : Booth
     {
         private string songchoice;  private string songchoice2; private string songchoice3;
         protected string songlist1; protected string songlist2; protected string songlist3;
@@ -94,4 +92,3 @@ namespace Program
             }
         }
     }
-}

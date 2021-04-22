@@ -3,15 +3,14 @@ using Newtonsoft.Json;
 using RestSharp;
 using System.Linq;
 
-namespace Program
-{
-    public class Trivia_booth : Booth_basklass
+    public class TriviaBooth : Booth
     {
         private bool morefacts = true;
         private int trivianuminput;
-        public void apithing ()
+        public void Trivia()
         {
-           
+          trues = false;
+          morefacts = true;
            
             Console.WriteLine("Hello and welcome to the number trivia booth!");
             Console.WriteLine("Here you can tell us a number and we will tell you a fun fact about it so go ahead and write a number in!");
@@ -21,7 +20,7 @@ namespace Program
             try {
 
              // instansierar Game_variables så att getnumber metoden kan köras och så att inkapslingen är aktiv
-             Booth_basklass linkcreate = new Booth_basklass();           
+             Booth linkcreate = new Booth();           
         
               /* konverterar vad avändaren skrev för numer till en int som sedan läggs imellan länkens 2 delar så den skapar en länk som 
               requestar ett random fact om numret som spelaren skrev in */  
@@ -57,7 +56,7 @@ namespace Program
               trues = true;
             }
 
-            Console.ReadLine();
+           
             trues = true;
  
             }
@@ -72,4 +71,3 @@ namespace Program
         
      
     }
-}

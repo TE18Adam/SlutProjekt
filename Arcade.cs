@@ -1,27 +1,51 @@
-﻿using System;
+using System.Collections.Generic;
+using Newtonsoft.Json;
+using System.Linq;
+using RestSharp;
+using System;
 
 
-namespace Program
+public class Arcade
 {
-    class Program
+    LuxuryJukebox lyxinstanst = new LuxuryJukebox();
+    NumberGuessBooth ng = new NumberGuessBooth();
+    TriviaBooth instans = new TriviaBooth();
+    Jukebox jukeinstans = new Jukebox();
+    private bool arcaderunning = true;
+    private string playerchoice;
+   
+    public void high()
     {
-        static void Main(string[] args)
-        {
-          luxuryjukebox lyxinstanst = new luxuryjukebox();
-          lyxinstanst.luxury();     
+        Console.WriteLine("Write which game you want to play. There is trivia, numberguess, jukebox and luxuryjukebox. ");
         
-            // instans för jukebox klassen
-            jukebox jukeinstans = new jukebox();
-            jukeinstans.juke();
+        // detta är spel loopen. sålänge true är sann så körs spelet.
+        while(arcaderunning == true)
+        {
 
-            // här instansieras klassen NumberGuess så att spelet vars logik klassen själv sköter körs i main
-            NumberGuess_booth ng = new NumberGuess_booth();
-            ng.numberguessmetod();
-           
-            // instas för API klassen
-            Trivia_booth instans = new Trivia_booth();
-            instans.apithing();       
-            
+            // playerchoice registrerar vad du skriver och baserat på vilket spels namn du skriver så kör den ditt önskade spel.
+            Console.WriteLine("What game do you want to play?");
+            playerchoice = Console.ReadLine();
+
+            if(playerchoice == "guess")
+            {
+                ng.numberguessmetod();              
+            }
+
+            else if(playerchoice == "trivia")
+            {
+                instans.Trivia();             
+            }
+
+            else if(playerchoice == "juke")
+            {
+                jukeinstans.juke();
+            }
+
+            else if(playerchoice == "luxury jukebox")
+            {
+                lyxinstanst.Luxury();       
+            }
+
         }
     }
 }
