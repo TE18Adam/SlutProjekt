@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 using System.Linq;
 using RestSharp;
@@ -26,7 +26,7 @@ public class Arcade
             Console.WriteLine("What game do you want to play?");
             playerchoice = Console.ReadLine();
 
-            if(playerchoice == "guess")
+            if(playerchoice == "numberguess")
             {
                 ng.numberguessmetod();              
             }
@@ -36,7 +36,7 @@ public class Arcade
                 instans.Trivia();             
             }
 
-            else if(playerchoice == "juke")
+            else if(playerchoice == "jukebox")
             {
                 jukeinstans.juke();
             }

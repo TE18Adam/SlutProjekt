@@ -18,54 +18,46 @@ using System.Linq;
           while(trues == false && morefacts == true)
           {
             try {
-
-             // instansierar Game_variables så att getnumber metoden kan köras och så att inkapslingen är aktiv
-             Booth linkcreate = new Booth();           
         
               /* konverterar vad avändaren skrev för numer till en int som sedan läggs imellan länkens 2 delar så den skapar en länk som 
               requestar ett random fact om numret som spelaren skrev in */  
               trivianuminput =  Convert.ToInt32(Console.ReadLine());
-            
+               
               // anropar instansen linkcreate och accessar metoden getnumber inom instansen och sätter variabeln inom metoden till trivianuminput om kraven av inkapslingen är zVBNµ|
-              linkcreate.getnumber = trivianuminput;
-                        
-              string link = "http://numbersapi.com/" + getnumber + "/trivia";
+          
+              string link = "http://numbersapi.com/" + trivianuminput + "/trivia";
                     
-
-            // Här skapar man ett pull request för data från den publika API'n visad i den första parantesen
-            RestClient PullingFrom = new RestClient("http://numbersapi.com/");
+              // Här skapar man ett pull request för data från den publika API'n visad i den första parantesen
+              RestClient PullingFrom = new RestClient("http://numbersapi.com/");
             
-            // här specfierar vad från API'n det är för information man vill ha 
-            RestRequest TriviaRequest = new RestRequest(link);
-            IRestResponse response = PullingFrom.Get(TriviaRequest);
+              // här specfierar vad från API'n det är för information man vill ha 
+              RestRequest TriviaRequest = new RestRequest(link);
+              IRestResponse response = PullingFrom.Get(TriviaRequest);
           
  
-            Console.WriteLine(response.Content);
-            Console.WriteLine("Want facts about more numbers?");
-            string factsagain = Console.ReadLine();
+              Console.WriteLine(response.Content);
+              Console.WriteLine("Want facts about more numbers?");
+              string factsagain = Console.ReadLine();
            
-            if( yesarray.Contains(factsagain) )
-            {
-              morefacts = true;
-              trues = false;
-            }
+              if( yesarray.Contains(factsagain) )
+              {
+                morefacts = true;
+                trues = false;
+              }
 
-            if( noarray.Contains(factsagain) )
-            {
-              morefacts = false;
-              trues = true;
-            }
-
-           
-            trues = true;
- 
-            }
-            catch
-            {
-              Console.WriteLine( "Write in a number not text");
-            }
+              if( noarray.Contains(factsagain) )
+              {
+                morefacts = false;
+                trues = true;
+              }
+              
+              }
+              catch
+              {
+                Console.WriteLine( "Write in a number not text");
+              }
          
-          }
+            }
 
         }
         

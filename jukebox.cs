@@ -40,14 +40,14 @@ using RestSharp;
                 songorder.Enqueue(songchoice3);
 
                 // här spelas spelarens låtval upp och medans den spelas så tas den bort ur queuen
-                Console.WriteLine("Those are some fine tunes. We will play the first one named: " + songorder.Dequeue() );
-                Console.WriteLine("Now the second song named: " + songorder.Dequeue() );
-                Console.WriteLine("Now the third song named: " + songorder.Dequeue() );
-                Console.WriteLine("Looks like all your songs have been played.");
+                Console.WriteLine("song 1: " + songorder.Dequeue() );
+                Console.WriteLine("song 2: " + songorder.Dequeue() );
+                Console.WriteLine("song 3: " + songorder.Dequeue() );
+                Console.WriteLine("All your songs have been played.");
 
 
             
-                Console.WriteLine("Emergency broadcast, many customers have put in complaints about not being able to change their song choice");
+                Console.WriteLine("Many customers have put in complaints about not being able to change their song choice");
                 while(lista == true)
                 {
                 

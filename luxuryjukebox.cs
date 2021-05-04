@@ -10,10 +10,11 @@ using System;
      
         public void Luxury()
         {
-            var songlist = new List<string>(); 
+           
 
             while(replay == true)
             {
+                 var songlist = new List<string>(); 
                 Console.WriteLine("This is the luxury jukebox where you can choose not just 3 but as many songs that you want.");
                 Console.WriteLine(" So here have your picks, and when you sre satisfied with your choices type the word, done");
 
@@ -40,6 +41,7 @@ using System;
                     System.Console.WriteLine("alright booting up the luxury jukebox again.");
                     replay = true;
                     trues = false;
+                   
                 }
                 
                 if(noarray.Contains(songlist1))

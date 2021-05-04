@@ -16,7 +16,7 @@ public class NumberGuessBooth : Booth
 
     public void numberguessmetod()
     {
-        secretnumber = randomnumber.Next(2) + 1;
+        secretnumber = randomnumber.Next(9) + 1;
         trues = false;
         replay = true;
         attempts = 3;
@@ -24,15 +24,13 @@ public class NumberGuessBooth : Booth
         while (trues == false)
         {
             try
-            {
-
-                
-                secretnumber = randomnumber.Next(2) + 1;
-
-
+            {      
+                secretnumber = randomnumber.Next(9) + 1;
                 // En while loop vars funktion är att kolla om spelaren vill spela om spelet eller gå vidare till nästa
                 while (replay == true)
                 {
+                   
+                    Console.WriteLine(secretnumber);
 
                     // if sats som bara tillåter texten att visas om spelaren har alla gissningar kvar så den inte visas efter varje gissning
                     if (attempts == 3)
@@ -59,9 +57,9 @@ public class NumberGuessBooth : Booth
                             replay = false;
                             highscore.Add(3 - attempts);
 
-                            Console.WriteLine(" Congrats your guess of " + attempts + " was right!");
+                            Console.WriteLine(" Congrats your guess of " + secretnumber + " was right!");
                             Console.Write("your highscore is ");
-                            highscore.ForEach(Console.WriteLine);
+                            Console.WriteLine(3 - attempts);
                             Console.WriteLine("Do you want to play again?");
                             WnaReplay = Console.ReadLine();
                         }
@@ -78,7 +76,9 @@ public class NumberGuessBooth : Booth
                     if (attempts == 0)
                     {
                         Console.WriteLine("You ran out of guesses and lost. The secret number was " + secretnumber + ".");
-                        replay = false;
+                        Console.WriteLine("Want to replay?");
+                        WnaReplay = Console.ReadLine();
+                        //replay = false;
                     }
 
 
@@ -86,7 +86,7 @@ public class NumberGuessBooth : Booth
                     // om spelaren vill spela om spelet igen så startas loopen om igen och spelaren återfår alla sina 3 gissningar
                     if (yesarray.Contains(WnaReplay))
                     {
-                        secretnumber = randomnumber.Next(2) + 1;
+                        secretnumber = randomnumber.Next(9) + 1;
                         replay = true;
                         attempts = 3;
                     }
