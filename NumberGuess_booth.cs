@@ -8,7 +8,7 @@ public class NumberGuessBooth : Booth
 {
 
     private int attempts = 3;
-    private int hisguess = 0;
+    protected int hisguess = 0;
     private int secretnumber;
     private string WnaReplay;
 
@@ -105,6 +105,11 @@ public class NumberGuessBooth : Booth
                 Console.WriteLine("Write in a number not letters");
             }
 
-        }
+        } 
+    }
+     public override void virtualvoid()
+    {
+        int virtuual = 5;
+        Console.WriteLine("And me the derived class changed it to " + virtuual);
     }
 }

@@ -11,6 +11,7 @@ public class Arcade
     NumberGuessBooth ng = new NumberGuessBooth();
     TriviaBooth instans = new TriviaBooth();
     Jukebox jukeinstans = new Jukebox();
+    riddle riddleinstans = new riddle();
     private bool arcaderunning = true;
     private string playerchoice;
    
@@ -44,6 +45,11 @@ public class Arcade
             else if(playerchoice == "luxury jukebox")
             {
                 lyxinstanst.Luxury();       
+            }
+
+            else if(playerchoice == "riddle")
+            {
+                riddleinstans.riddleme();
             }
 
         }

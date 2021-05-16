@@ -41,4 +41,11 @@ public class Booth
             }
         }
     }
+
+    public virtual void virtualvoid()
+    {
+        int virtuual = 10;
+        Console.WriteLine("The base class put this int at a value of " + virtuual);
+    }
 }
+
