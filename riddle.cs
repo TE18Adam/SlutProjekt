@@ -5,6 +5,7 @@ using System.Collections.Generic;
     {
 
     //  int riddlesvar = 4;
+    string booom;
       
       public void riddleme()
       {
@@ -30,16 +31,18 @@ using System.Collections.Generic;
               housestack.Push(6);
               housestack.Push(7);
 
-              hisguess = Convert.ToInt32(Console.ReadLine());
+              booom = Console.ReadLine();
 
-              if(hisguess == 1)
+              if(booom == "boom")
               {
                 
                 while(housestack.Peek() != 1)
                 {
                   Console.Write("Destroyed story ");
                   Console.WriteLine(housestack.Pop() - 1);
-                }           
+                }    
+
+                Console.WriteLine("All stories are destroyed, the building is decimated");       
                  
               }
               
@@ -68,7 +71,7 @@ using System.Collections.Generic;
 
           } catch
             {
-              Console.WriteLine("write in the number not letters");
+              
             }
 
       }
