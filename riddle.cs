@@ -18,10 +18,8 @@ using System.Collections.Generic;
         
           try
           {
-       
             while(trues == false)
             {
-
               Stack<int> housestack = new Stack<int>();
               housestack.Push(1);
               housestack.Push(2);
@@ -34,8 +32,12 @@ using System.Collections.Generic;
               booom = Console.ReadLine();
 
               if(booom == "boom")
-              {
-                
+              {             
+             /* en loop som visar hur stack kan användas. här kollar man på värdet högst upp i högen genom .Peek() och när man gör 
+                det så tas den komponenten man kollade på genom .Peek() bort med .Pop(). Jag skrev till -1 eftersom att stack körs
+                sålänge den inte är på värde 1 så den stannar på värdet 2 men jag vill att hela byggnaden kollapsar så jag får det
+                sista värdet att visas som 1 istället för 2 så alla våningar kollapsar */
+               
                 while(housestack.Peek() != 1)
                 {
                   Console.Write("Destroyed story ");
